@@ -423,3 +423,36 @@ main {
   font-size: 0.65rem;
   color: white;
 }
+
+main p {
+  margin: 1em;
+}
+
+form {
+  background: #FFFFFE;
+  padding: 1em 5em 2em 1em;
+  box-shadow: 0 0.2em 0.2em rgb(0 0 0 / 20%); 
+}
+
+input {
+  border: 2px solid #E5E7EB;
+  border-radius: 0.2em;
+}
+
+form h3 {
+  margin: 0;
+}
+
+form label {
+  display: block;
+}
+
+form div {
+  margin: 1em;
+  margin-left: 0;
+}
+
+main button {
+  margin: 1em;
+}
+
