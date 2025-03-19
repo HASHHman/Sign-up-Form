@@ -6,6 +6,16 @@
 	font-style: normal;
 }
 
+@font-face {
+  font-family: 'Inter';
+  src: url('./fonts/Inter-Regular.woff2') format('woff2'),
+      url('./fonts/Inter-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 /*#region*/
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
@@ -370,41 +380,51 @@ html {
 }
 
 .base-container {
+  width: 1440px;
+  height: 1024px;
   display: flex;
-  max-width: 1280px;
   margin: auto;
 }
 
 body {
   background-color: #1B1E20;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
 }
 
 aside {
   background: url('./images/alie-west.jpg') no-repeat center/cover, gray;
-  height: 100vh;
-  flex: 0.25;
+  height: 100%;
+  flex: 0.37;
   position: relative;
 }
 
 main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background: #F9FAFB;
-  height: 100vh;
-  flex: 0.75;
+  height: 100%;
+  flex: 0.63;
 }
 
 .logo-wrapper {
+  padding: 0.75em;
   background-color: rgb(0 0 0 / 50%);
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  top: 20%;
+  top: 22%;
+}
+
+.logo-wrapper img {
+  height: 125px;
 }
 
 .logo-wrapper span {
   color: white;
-  font-size: 4rem;
+  font-size: 6rem;
   font-family: norsebold;
 }
 
@@ -420,39 +440,78 @@ main {
 
 .photo-credit,
 .photo-credit a {
-  font-size: 0.65rem;
+  font-size: 0.8rem;
   color: white;
 }
 
 main p {
-  margin: 1em;
+  margin: 35px 35px 35px 45px;
+}
+
+main button {
+  width: 225px;
+  height: 50px;
+  margin: 35px 35px 0 45px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  background-color: #596D48;
+}
+
+.pre-text {
+  margin: 35px 35px 45px 45px;
+  font-size: 24px;
+  font-weight: 600;
 }
 
 form {
   background: #FFFFFE;
-  padding: 1em 5em 2em 1em;
-  box-shadow: 0 0.2em 0.2em rgb(0 0 0 / 20%); 
+  padding: 25px 25px 25px 45px;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 20%);
+  color: #37404D;
+}
+
+form > div > div {
+  display: inline-block;
+  margin-right: 60px;
 }
 
 input {
+  width: 280px;
+  height: 35px;
   border: 2px solid #E5E7EB;
   border-radius: 0.2em;
 }
 
-form h3 {
+form h2 {
   margin: 0;
+  font-weight: 600;
 }
 
 form label {
   display: block;
 }
 
-form div {
-  margin: 1em;
-  margin-left: 0;
+form > div {
+  margin: 20px 0 20px 0;
 }
 
-main button {
-  margin: 1em;
+input[type="password"]:invalid {
+  border-color: red;
 }
 
+input[type="password"]:focus {
+  border-color: blue;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
